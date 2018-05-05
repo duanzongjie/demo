@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.DeptMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.model" >
+        <id column="dept_id" property="deptId" jdbcType="INTEGER" />
+        <result column="dept_name" property="deptName" jdbcType="VARCHAR" />
+        <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="selectAllUser" resultMap="BaseResultMap">
+        select dept_id,dept_name,remarks
+        from dept
+    </select>
+</mapper>
+
