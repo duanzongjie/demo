@@ -19,4 +19,7 @@ public interface JobMapper {
 
     @Delete("delete from job where id=#{id}")
     int delJobByID(@Param("id") int id);
+
+    @Update("update job set name =#{name},remarks=#{remarks} where id=#{id}")
+    int UpdateJob(@Param("name") String name,@Param("remarks") String remarks,@Param("id") int id);
 }

@@ -26,4 +26,14 @@ public class JobServiceImpl implements JobService {
     public int addJob(int id, String name, String remarks) {
         return jobMapper.addJob(id,name,remarks);
     }
+
+    @Override
+    public int updateJobById(String name, String remarks, int id) {
+        return jobMapper.UpdateJob(name,remarks,id);
+    }
+
+    @Override
+    public int delJobById(int id) {
+        return jobMapper.delJobByID(id);
+    }
 }

@@ -11,4 +11,8 @@ public interface JobService {
     Job getJobById(int jobId);
 
     int addJob(int id,String name,String remarks);
+
+    int updateJobById(String name,String remarks,int id);
+
+    int delJobById(int id);
 }

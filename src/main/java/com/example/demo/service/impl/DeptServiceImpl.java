@@ -23,4 +23,19 @@ public class DeptServiceImpl implements DeptService {
     public List<Dept> findAllUser() {
         return  deptMapper.selectAllUser();
     }
+
+    @Override
+    public int updateDeptById(String deptName, String remarks, int deptId) {
+        return deptMapper.UpdateDeptById(deptName,remarks,deptId);
+    }
+
+    @Override
+    public int delDeptById(int deptId) {
+        return deptMapper.delDeptById(deptId);
+    }
+
+    @Override
+    public int addDept(int deptId, String deptName, String remaks) {
+        return deptMapper.addDept(deptId,deptName,remaks);
+    }
 }

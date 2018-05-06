@@ -12,4 +12,10 @@ public interface DeptService {
 
     Dept getDeptById(int deptId);
 
+    int updateDeptById(String deptName,String remarks,int deptId);
+
+    int delDeptById(int deptId);
+
+    int addDept(int deptId,String deptName,String remaks);
+
 }
